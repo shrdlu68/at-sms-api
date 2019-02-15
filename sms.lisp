@@ -24,7 +24,7 @@
 		   keyword linkid retry-duration)
   "<dest> can either be a single string or a list of strings"
   (multiple-value-bind (body status-code headers)
-      (drakma:http-request "http://api.africastalking.com/version1/messaging"
+      (drakma:http-request "https://api.africastalking.com/version1/messaging"
 			   :method :POST
 			   :content (format nil
 					    "username=~/at-api::format-url-encode/~
