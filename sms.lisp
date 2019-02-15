@@ -6,7 +6,6 @@
 
 (ql:quickload :drakma)
 (ql:quickload :xmls)
-(ql:quickload :hunchentoot)
 
 (defparameter *username* "")
 (defparameter *api-key* "")
@@ -46,3 +45,5 @@
 	   (values status-code (xmls:parse-to-list body)))
 	  (t
 	   (values status-code body)))))
+
+(export '(set-default-creds send-sms) :at-api)
